@@ -1,0 +1,23 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    --main-hue: 176;
+    --block-hue: 176; /* #102f2d */
+    --main-hue-deg: 50deg;
+    --color-main-hue: 240;
+    --defaultImageValue: blue;
+
+    --board-column-size: 70px;
+    --default-board-column-size: 70px;
+    --medium-board-column-size: 50px;
+    --small-board-column-size: 30px;
+
+    --item-column-size: 1;
+    --default-item-scale: 1;
+    --medium-item-scale: 0.7;
+    --small-item-scale: 0.5;
+
+    background-color: mainColor(50%, 10%);
+}

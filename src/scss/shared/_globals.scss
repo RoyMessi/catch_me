@@ -1,0 +1,42 @@
+.main-color {
+    color: mainColor(100%, 100%);
+}
+.hidden {
+    visibility: hidden;
+}
+.w-100 {
+    width: 100%;
+}
+.d-none {
+    display: none;
+}
+.opacity-0 {
+    opacity: 0;
+}
+.d-flex {
+    display: flex;
+}
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-d-column {
+    flex-direction: column;
+}
+.flex-d-row {
+    flex-direction: row;
+}
+.flex-gap-1 {
+    gap: 0.5rem;
+}
+.mt-1 {
+    margin-top: 0.5rem;
+}
+.mt-2 {
+    margin-top: 1rem;
+}
+.my-2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

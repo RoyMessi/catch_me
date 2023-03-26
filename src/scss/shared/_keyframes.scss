@@ -1,0 +1,53 @@
+@keyframes rotate-y-axis {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes rotate-x-axis-half-the-way {
+    0% {
+        transform: rotateZ(0);
+    }
+    25% {
+        transform: rotateZ(45deg);
+    }
+    50% {
+        transform: rotateZ(0deg);
+    }
+    75% {
+        transform: rotateZ(-45deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes keyframe-toggle-scale-2 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes translate-y-axis {
+    0% {
+        transform: translateY(0.15rem);
+    }
+    50% {
+        transform: translateY(-0.15rem);
+    }
+    100% {
+        transform: translateY(0.15rem);
+    }
+}

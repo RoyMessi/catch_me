@@ -1,0 +1,37 @@
+- Game
+    - Level:
+        - Start a new level
+        - On level ready
+        - Events listener
+        - Tests
+        - Tear down current level
+    - General
+        - Check if there is another level
+        - Stop the game
+    - UI
+        - Update ui according to events
+- Level
+    - Board
+        - Set board
+        - Knows where everything are all the time
+    - Items (Manage items)
+        - Add (Player, Collectable, Enemy)
+        - Remove (Collectable)
+        - Event listener
+- Board
+    - Structure
+    - Draw structure
+    - Matrix manage
+        - Add item
+        - Remove item
+        - Get new location by item direction
+    - Move item on board
+- Player
+    - Events
+- Enemy
+    - Enemy strategy
+    (Catch the player)
+- Collectable
+    - On over collectable
+- Functions
+    - General functions

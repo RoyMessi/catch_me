@@ -1,0 +1,7 @@
+@function mainColor($saturation, $lightness) {
+    @return hsl(var(--main-hue), #{$saturation}, #{$lightness});
+}
+
+@function blockColor($saturation, $lightness) {
+    @return hsl(var(--block-hue), #{$saturation}, #{$lightness});
+}

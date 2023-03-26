@@ -1,0 +1,20 @@
+@mixin block-background-image {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' viewBox='0 0 700 700' width='700' height='700' opacity='1'%3E%3Cdefs%3E%3Cfilter id='nnnoise-filter' x='-20%25' y='-20%25' width='140%25' height='140%25' filterUnits='objectBoundingBox' primitiveUnits='userSpaceOnUse' color-interpolation-filters='linearRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.102' numOctaves='4' seed='15' stitchTiles='stitch' x='0%25' y='0%25' width='100%25' height='100%25' result='turbulence'%3E%3C/feTurbulence%3E%3CfeSpecularLighting surfaceScale='15' specularConstant='0.75' specularExponent='20' lighting-color='hsl(176, 55%25, 37%25)' x='0%25' y='0%25' width='100%25' height='100%25' in='turbulence' result='specularLighting'%3E%3CfeDistantLight azimuth='3' elevation='100'%3E%3C/feDistantLight%3E%3C/feSpecularLighting%3E%3C/filter%3E%3C/defs%3E%3Crect width='700' height='700' fill='hsla(176, 48%25, 12%25, 1.00)'%3E%3C/rect%3E%3Crect width='700' height='700' fill='hsl(176, 55%25, 37%25)' filter='url(%23nnnoise-filter)'%3E%3C/rect%3E%3C/svg%3E");
+}
+
+@mixin box-element {
+    min-height: 200px;
+    background-color: blockColor(50%, 10%);
+    padding: 1.5rem;
+    border: 1px solid blockColor(100%, 70%);
+    border-radius: 0.5rem;
+    box-shadow: 0px 3px 10px 0px #0000008a;
+}
+
+@mixin svg-element-settings($width, $height) {
+    svg {
+        display: block;
+        width: #{$width}px;
+        height: #{$height}px;
+    }
+}

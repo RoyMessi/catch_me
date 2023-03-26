@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+@import "./shared/_functions.scss";
+@import "./shared/_mixins.scss";
+@import "./shared/_keyframes.scss";
+@import "./shared/_variables.scss";
+@import "./shared/_globals.scss";
+@import "./shared/_buttons.scss";
+@import "./shared/_items.scss";
+@import "./shared/_welcome.scss";
+@import "./shared/_game.scss";

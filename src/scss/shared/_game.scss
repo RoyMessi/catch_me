@@ -1,0 +1,80 @@
+#game_info {
+    display: flex;
+    justify-content: space-between;
+}
+
+#level_status {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #02020270;
+    min-width: 320px;
+    min-height: 200px;
+}
+
+body.game-page {
+    height: 100vh;
+    display: flex;
+    place-items: center center;
+
+    #app {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+    }
+}
+#level_wrapper {
+    position: relative;
+}
+
+#game_over_with_success {
+    @include box-element;
+    width: 60vw;
+}
+
+#level_not_found {
+    @include box-element;
+    width: 60vw;
+}
+
+.board {
+    display: inline-flex;
+    flex-direction: column;
+    border: 1px solid hsl(var(--block-hue), 50%, 10%);
+    box-shadow: 0px 5px 10px 2px #0000008a;
+
+    .board-row {
+        display: flex;
+        place-content: center;
+
+        .board-column:last-child {
+            border-right: 0;
+        }
+
+        &:last-child .board-column {
+            border-bottom: 0;
+        }
+    }
+
+    .board-column {
+        position: relative;
+        flex: 0 1 var(--board-column-size);
+        background-color: hsl(var(--main-hue-deg), 80%, 40%);
+        @include block-background-image;
+        border-right: 1px solid blockColor(60%, 14%);
+        border-bottom: 1px solid blockColor(60%, 14%);
+        width: var(--board-column-size);
+        height: var(--board-column-size);
+
+        &:not(.block) {
+            filter: hue-rotate(var(--main-hue-deg));
+        }
+
+        &.block {
+            filter: brightness(0.5);
+        }
+    }
+}

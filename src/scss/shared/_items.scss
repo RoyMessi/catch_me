@@ -1,0 +1,111 @@
+$collectable-regular: rgb(251, 251, 22);
+$collectable-bad: rgb(255, 7, 7);
+$collectable-very-good: rgb(10, 143, 10);
+
+.mobile,
+.immobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 300ms linear, opacity cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.5s;
+}
+
+.mobile.player {
+    width: 30px;
+    height: 25px;
+
+    @include svg-element-settings(30, 25);
+
+    &.dir-up object {
+        transform: rotate(-90deg);
+    }
+
+    &.dir-down object {
+        transform: rotate(90deg);
+    }
+
+    &.dir-right object {
+        transform: rotate(0deg);
+    }
+
+    &.dir-left object {
+        transform: scaleX(-1);
+        filter: FlipH;
+    }
+}
+
+.immobile.collectable {
+    width: 30px;
+    height: 30px;
+
+    object {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        animation: 2s infinite linear rotate-y-axis 0.2s;
+    }
+
+    &.collectable-type-bad {
+        width: 50px;
+        height: 50px;
+        fill: $collectable-bad;
+
+        object {
+            animation: 2s infinite linear rotate-x-axis-half-the-way 0.2s;
+        }
+    }
+    &.collectable-type-very-good {
+        width: 40px;
+        height: 40px;
+        object {
+            animation: 2s infinite linear keyframe-toggle-scale-2 0.2s;
+        }
+    }
+}
+
+.mobile.enemy {
+    width: 50px;
+    height: 50px;
+
+    svg {
+        animation: 1.2s infinite linear translate-y-axis 0.2s;
+    }
+
+    @include svg-element-settings(24, 35);
+
+    &.dir-up object {
+        transform: rotate(-90deg);
+    }
+
+    &.dir-up.old-dir-left object {
+        transform: rotate(-90deg) rotateX(180deg);
+    }
+
+    &.dir-up.old-dir-right object {
+        transform: rotate(-90deg) rotateX(0deg);
+    }
+
+    &.dir-down object {
+        transform: rotate(90deg);
+    }
+
+    &.dir-down.old-dir-left object {
+        transform: rotate(90deg) rotateX(180deg);
+    }
+
+    &.dir-down.old-dir-right object {
+        transform: rotate(90deg) rotateX(0deg);
+    }
+
+    &.dir-right object {
+        transform: rotate(0deg);
+    }
+
+    &.dir-left object {
+        transform: scaleX(-1);
+        filter: FlipH;
+    }
+}
