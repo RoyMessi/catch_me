@@ -184,3 +184,14 @@ As you can see, you can change a lot of things :)
   - In case you're trying to place an item outside the level size(rows|columns) - you'll get an error
 - on keydown long press the player is stuck for a moment
   - This is due to how the JS handle the keydown repeat (Will try to attend this issue)
+
+## Thank you!
+
+- Audio
+
+  - https://pixabay.com
+  - https://samplefocus.com
+
+- Images
+  - https://freesvg.org
+  - https://pixabay.com
